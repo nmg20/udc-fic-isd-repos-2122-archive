@@ -1,0 +1,91 @@
+------------------ xxxxxxxx -> Nombre completo; Login github;
+
+********************************* it-1 *******************************************************
+----- DAOs
+---------- AbstractSqlExcursionDao
+------------------ find -> Carlos Rodriguez Prieto; Login: carlosrp1994
+------------------ update -> Carlos Rodriguez Prieto; Login: carlosrp1994
+------------------ findByCity -> Nicolás Martínez González; Login: nmg20
+------------------ remove -> Nicolás Martínez González; Login: nmg20
+---------- Jdbc3CcSqlExcursionDao
+------------------ create -> Carlos Rodriguez Prieto; Login: carlosrp1994
+---------- AbstractSqlReservaDao
+------------------ cancelar -> Alberto Peteiro Gándara; Login: peteiro99
+------------------ find -> Alberto Peteiro Gándara; Login: peteiro99
+------------------ findByUser -> Alberto Peteiro Gándara; Login: peteiro99
+---------- Jdbc3CcSqlReservaDao 
+------------------ create -> Nicolás Martínez González; Login: nmg20
+
+----- Servicios
+---------- ExcursionServiceImpl
+------------------ addExcursion -> Carlos Rodriguez Prieto; Login: carlosrp1994
+------------------ updateExcursion -> Carlos Rodriguez Prieto; Login: carlosrp1994
+------------------ findByCity 1 y 2 -> Nicolás Martínez González; Login: nmg20
+------------------ addReserva -> Nicolás Martínez González; Login: nmg20
+------------------ findByUser -> Alberto Peteiro Gándara; Login: peteiro99
+------------------ cancelarReserva -> Alberto Peteiro Gándara; Login: peteiro99
+
+----- Tests
+---------- AppServiceTest
+------------------ testValidacionDatosEntradaExcursion -> Carlos Rodriguez Prieto; Login: carlosrp1994
+------------------ testValidacionDatosEntradaReserva -> Carlos Rodriguez Prieto; Login: carlosrp1994
+------------------ testAddExcursionAndFindExcursion -> Carlos Rodriguez Prieto; Login: carlosrp1994
+------------------ testAddExcursionFueraDePlazo -> Carlos Rodriguez Prieto; Login: carlosrp1994
+------------------ testUpdateExcursionCambiarDescripcion -> Carlos Rodriguez Prieto; Login: carlosrp1994
+------------------ testUpdateExcursionCambiarNumPlazas -> Carlos Rodriguez Prieto; Login: carlosrp1994
+------------------ testUpdateExcursionFechaComienzo -> Carlos Rodriguez Prieto; Login: carlosrp1994
+------------------ testUpdateExcursion72hAfter -> Carlos Rodriguez Prieto; Login: carlosrp1994
+------------------ testFindExcursion -> Nicolás Martínez González; Login: nmg20
+------------------ testFindNonExistentExcursion -> Nicolás Martínez González; Login: nmg20
+------------------ testFindExcursionByCity -> Nicolás Martínez González; Login: nmg20
+------------------ testFindExcursionByCityInvalidRange -> Nicolás Martínez González; Login: nmg20
+------------------ testReservarExcursionAndFindReserva -> Nicolás Martínez González; Login: nmg20
+------------------ testReservarExcursionEmailNoValido -> Nicolás Martínez González; Login: nmg20
+------------------ testReservarExcursionPlazasNoDisponibles -> Nicolás Martínez González; Login: nmg20
+------------------ testReservarExcursionPlazasFueraDeRango -> Nicolás Martínez González; Login: nmg20
+------------------ testReservarExcursionTBNoValida -> Nicolás Martínez González; Login: nmg20
+------------------ testRemoveReserva -> Carlos Rodriguez Prieto; Login: carlosrp1994
+------------------ testCancelarReserva -> Carlos Rodriguez Prieto; Login: carlosrp1994
+------------------ testCancelarReservaEmailDistinto -> Carlos Rodriguez Prieto; Login: carlosrp1994
+------------------ testCancelarReservaYaCancelada -> Carlos Rodriguez Prieto; Login: carlosrp1994
+------------------ testCancelarReservaQueNoExiste -> Carlos Rodriguez Prieto; Login: carlosrp1994
+------------------ testCancelarReservaDateTooClose -> Carlos Rodriguez Prieto; Login: carlosrp1994
+------------------ testFindbyUser -> Alberto Peteiro Gándara; Login: peteiro99
+------------------ testFindbyUserNoResults -> Alberto Peteiro Gándara; Login: peteiro99
+------------------ testFindbyUserDosCorreosDistintos -> Carlos Rodriguez Prieto; Login: carlosrp1994
+------------------ testFindbyUserCorreoInvalido -> Carlos Rodriguez Prieto; Login: carlosrp1994
+------------------ testFindbyUserNoSeEncuentranReservas -> Alberto Peteiro Gándara; Login: peteiro99
+
+***************************************************************************************************
+
+********************************* it-2 ************************************************************
+
+Carlos Rodriguez Prieto; Login: carlosrp1994
+Nicolás Martínez González; Login: nmg20
+Alberto Peteiro Gándara; Login: alberto.peteiro
+
+ws-app-service
+
+----- servlets
+---------- ExcursionServlet -> Nicolás Martínez González; Login: nmg20
+------------------ processPost -> Nicolás Martínez González; Login: nmg20
+------------------ processPut -> Nicolás Martínez González; Login: nmg20
+------------------ processGet -> Nicolás Martínez González; Login: nmg20
+------------------
+---------- ReservaServlet -> Carlos Rodriguez Prieto; Login: carlosrp1994
+------------------ processPost -> Carlos Rodriguez Prieto; Login: carlosrp1994
+------------------ processPut -> Carlos Rodriguez Prieto; Login: carlosrp1994
+------------------ processGet -> Carlos Rodriguez Prieto; Login: carlosrp1994
+
+ws-app-client
+
+----- rest
+---------- RestClientExcursionService
+------------------ addExcursion -> Nicolás Martínez González; Login: nmg20
+------------------ updateExcursion -> Nicolás Martínez González; Login: nmg20
+------------------ findByCity -> Nicolás Martínez González; Login: nmg20
+------------------ addReserva -> Carlos Rodriguez Prieto; Login: carlosrp1994
+------------------ cancelarReserva -> Carlos Rodriguez Prieto; Login: carlosrp1994
+------------------ findbyUser -> Carlos Rodriguez Prieto; Login: carlosrp1994
+------ui
+----------- AppServiceClient -> Alberto Peteiro Gándara; Login: alberto.peteiro

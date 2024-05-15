@@ -1,0 +1,90 @@
+- AddExcursion
+
+mvn exec:java -Dexec.mainClass="es.udc.ws.app.client.ui.AppServiceClient" -Dexec.args="-addExc 'A Coruña' 'Ciudad Vieja' '2022-08-15T11:00' 20 10"
+mvn exec:java -Dexec.mainClass="es.udc.ws.app.client.ui.AppServiceClient" -Dexec.args="-addExc 'Santiago' 'Visita Catedral' '2022-09-25T11:00' 25 30"
+mvn exec:java -Dexec.mainClass="es.udc.ws.app.client.ui.AppServiceClient" -Dexec.args="-addExc 'A Coruña' 'Hércules' '2022-08-20T11:00' 18 20"
+mvn exec:java -Dexec.mainClass="es.udc.ws.app.client.ui.AppServiceClient" -Dexec.args="-addExc 'A Coruña' 'Día de Playas' '2022-10-25T11:00' 40 50"
+mvn exec:java -Dexec.mainClass="es.udc.ws.app.client.ui.AppServiceClient" -Dexec.args="-addExc ' ' 'Casco Histórico' '2022-08-14T11:00' 25 30"
+mvn exec:java -Dexec.mainClass="es.udc.ws.app.client.ui.AppServiceClient" -Dexec.args="-addExc 'Santiago' ' ' '2022-08-14T11:00' 25 30"
+mvn exec:java -Dexec.mainClass="es.udc.ws.app.client.ui.AppServiceClient" -Dexec.args="-addExc 'Santiago' 'Casco Histórico' '2021-08-14T11:00' 25 30"
+mvn exec:java -Dexec.mainClass="es.udc.ws.app.client.ui.AppServiceClient" -Dexec.args="-addExc 'Santiago' 'Casco Histórico' '2022-08-14T11:00' -2 30"
+mvn exec:java -Dexec.mainClass="es.udc.ws.app.client.ui.AppServiceClient" -Dexec.args="-addExc 'Santiago' 'Casco Histórico' '2022-08-14T11:00' 25 0"
+
+
+- AddReserva
+
+mvn exec:java -Dexec.mainClass="es.udc.ws.app.client.ui.AppServiceClient" -Dexec.args="-reserve 'user1@udc.es' 1 '0123456789111111' 5"
+mvn exec:java -Dexec.mainClass="es.udc.ws.app.client.ui.AppServiceClient" -Dexec.args="-reserve 'user2@udc.es' 1 '0123456789222222' 4"
+mvn exec:java -Dexec.mainClass="es.udc.ws.app.client.ui.AppServiceClient" -Dexec.args="-reserve 'user1@udc.es' 3 '0123456789111111' 2"
+mvn exec:java -Dexec.mainClass="es.udc.ws.app.client.ui.AppServiceClient" -Dexec.args="-reserve 'user3@udc.es' 4 '0123456789333333' 3"
+mvn exec:java -Dexec.mainClass="es.udc.ws.app.client.ui.AppServiceClient" -Dexec.args="-reserve 'user3@udc.es' 1 '0123456789333333' 3"
+mvn exec:java -Dexec.mainClass="es.udc.ws.app.client.ui.AppServiceClient" -Dexec.args="-reserve 'user4@udc.es' 9 '0123456789444444' 3"
+mvn exec:java -Dexec.mainClass="es.udc.ws.app.client.ui.AppServiceClient" -Dexec.args="-reserve 'user4@udc.es' 2 '0123456789444444' 6"
+mvn exec:java -Dexec.mainClass="es.udc.ws.app.client.ui.AppServiceClient" -Dexec.args="-reserve 'user4@udc.es' 2 '0123456789' 2"
+
+Update excursion 4 en la BD:
+UPDATE Excursion SET fechaComienzo='2021-08-25 11:00' WHERE excursionId=4;
+
+mvn exec:java -Dexec.mainClass="es.udc.ws.app.client.ui.AppServiceClient" -Dexec.args="-reserve 'user4@udc.es' 4 '0123456789333333' 2"
+
+
+- UpdateExcursion
+
+mvn exec:java -Dexec.mainClass="es.udc.ws.app.client.ui.AppServiceClient" -Dexec.args="-updateExc 3 'A Coruña' 'Visita Torre de Hércules' '2022-10-20T11:00' 25 10"
+mvn exec:java -Dexec.mainClass="es.udc.ws.app.client.ui.AppServiceClient" -Dexec.args="-updateExc 1 'A Coruña' 'Ciudad Vieja' '2022-08-15T11:00' 20 8"
+mvn exec:java -Dexec.mainClass="es.udc.ws.app.client.ui.AppServiceClient" -Dexec.args="-updateExc 1 'A Coruña' 'Ciudad Vieja' '2022-07-30T11:00' 20 10"
+mvn exec:java -Dexec.mainClass="es.udc.ws.app.client.ui.AppServiceClient" -Dexec.args="-updateExc 4 'A Coruña' 'Día de Playas' '2022-10-25T11:00' 50 80"
+mvn exec:java -Dexec.mainClass="es.udc.ws.app.client.ui.AppServiceClient" -Dexec.args="-updateExc 9 'Lugo' 'Paseo Murallas' '2022-08-14T11:00' 10 5"
+mvn exec:java -Dexec.mainClass="es.udc.ws.app.client.ui.AppServiceClient" -Dexec.args="-updateExc 2 ' ' 'Casco Histórico' '2022-08-14T11:00' 25 30"
+mvn exec:java -Dexec.mainClass="es.udc.ws.app.client.ui.AppServiceClient" -Dexec.args="-updateExc 2 'Santiago' ' ' '2022-08-14T11:00' 25 30"
+mvn exec:java -Dexec.mainClass="es.udc.ws.app.client.ui.AppServiceClient" -Dexec.args="-updateExc 2 'Santiago' 'Casco Histórico' '2022-08-14T11:00' -2 30"
+mvn exec:java -Dexec.mainClass="es.udc.ws.app.client.ui.AppServiceClient" -Dexec.args="-updateExc 2 'Santiago' 'Casco Histórico' '2022-08-14T11:00' 25 0"
+
+
+- CancelarReserva
+
+mvn exec:java -Dexec.mainClass="es.udc.ws.app.client.ui.AppServiceClient" -Dexec.args="-cancel 3 'user1@udc.es'"
+mvn exec:java -Dexec.mainClass="es.udc.ws.app.client.ui.AppServiceClient" -Dexec.args="-cancel 3 'user1@udc.es'"
+mvn exec:java -Dexec.mainClass="es.udc.ws.app.client.ui.AppServiceClient" -Dexec.args="-cancel 4 'user3@udc.es'"
+mvn exec:java -Dexec.mainClass="es.udc.ws.app.client.ui.AppServiceClient" -Dexec.args="-cancel 2 'user1@udc.es'"
+mvn exec:java -Dexec.mainClass="es.udc.ws.app.client.ui.AppServiceClient" -Dexec.args="-cancel 9 'user2@udc.es'"
+
+
+- FindExcursiones
+
+mvn exec:java -Dexec.mainClass="es.udc.ws.app.client.ui.AppServiceClient" -Dexec.args="-findExcursions 'A Coruña' '2022-08-01' '2022-12-15'"
+mvn exec:java -Dexec.mainClass="es.udc.ws.app.client.ui.AppServiceClient" -Dexec.args="-findExcursions 'A Coruña' '2022-08-01' '2022-09-01'"
+mvn exec:java -Dexec.mainClass="es.udc.ws.app.client.ui.AppServiceClient" -Dexec.args="-findExcursions 'Santiago' '2022-08-01' '2022-09-01'"
+mvn exec:java -Dexec.mainClass="es.udc.ws.app.client.ui.AppServiceClient" -Dexec.args="-findExcursions 'Santiago' '2021-08-01' '2021-09-01'"
+mvn exec:java -Dexec.mainClass="es.udc.ws.app.client.ui.AppServiceClient" -Dexec.args="-findExcursions ' ' '2022-08-01' '2022-09-01'"
+
+
+- FindReservas
+
+mvn exec:java -Dexec.mainClass="es.udc.ws.app.client.ui.AppServiceClient" -Dexec.args="-findReservations 'user1@udc.es'"
+mvn exec:java -Dexec.mainClass="es.udc.ws.app.client.ui.AppServiceClient" -Dexec.args="-findReservations 'user6@udc.es'"
+
+-FindExcursionByPlaces
+
+mvn exec:java -Dexec.mainClass="es.udc.ws.app.client.ui.AppServiceClient" -Dexec.args="-findExcByPlaces 5 '2022-07-25'"
+mvn exec:java -Dexec.mainClass="es.udc.ws.app.client.ui.AppServiceClient" -Dexec.args="-findExcByPlaces 50 '2022-10-01'"
+mvn exec:java -Dexec.mainClass="es.udc.ws.app.client.ui.AppServiceClient" -Dexec.args="-findExcByPlaces 50 '2022-09-01'"
+mvn exec:java -Dexec.mainClass="es.udc.ws.app.client.ui.AppServiceClient" -Dexec.args="-findExcByPlaces 100 '2023-03-10'"
+mvn exec:java -Dexec.mainClass="es.udc.ws.app.client.ui.AppServiceClient" -Dexec.args="-findExcByPlaces -1 '2022-07-25'"
+mvn exec:java -Dexec.mainClass="es.udc.ws.app.client.ui.AppServiceClient" -Dexec.args="-findExcByPlaces 50 '2021-07-25'"
+
+-RemoveExcursion
+
+mvn exec:java -Dexec.mainClass="es.udc.ws.app.client.ui.AppServiceClient" -Dexec.args="-removeExcursion 4"
+mvn exec:java -Dexec.mainClass="es.udc.ws.app.client.ui.AppServiceClient" -Dexec.args="-removeExcursion 2"
+mvn exec:java -Dexec.mainClass="es.udc.ws.app.client.ui.AppServiceClient" -Dexec.args="-removeExcursion 3"
+mvn exec:java -Dexec.mainClass="es.udc.ws.app.client.ui.AppServiceClient" -Dexec.args="-removeExcursion 1"
+mvn exec:java -Dexec.mainClass="es.udc.ws.app.client.ui.AppServiceClient" -Dexec.args="-removeExcursion 3"
+
+
+
+
+
+- REST client (9090 for Jetty, 8080 for Tomcat)
+    - excursiones:   GET [http://localhost:8080/ws-app-service/excursion](http://localhost:8080/ws-app-service/excursion)
+    - reserva #1:   GET [http://localhost:8080/ws-app-service/reserva/1](http://localhost:8080/ws-app-service/reserva/1)
